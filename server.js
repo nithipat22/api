@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 
-app.use('/api/user', loginRoutes)
+app.use('/api/login', loginRoutes)
 app.use('/api/product', productRoutes)
 app.use('/api/register', registerRoutes)
 
