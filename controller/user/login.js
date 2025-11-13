@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 
-router.post('/', (req, res) => {
+router.post('/', (req, res) => {    //api/login
     const { username, password } = req.body || {};
 
-    if (!username || !password) {
+    if (!username || !password) { //ใช้แสดงว่าข้อมูลไม่ถูกต้อง
         return res.status(400).json({ message: 'username and password are required/ชื่อหรือรหัสผ่านไม่ถูก' });
     }
 

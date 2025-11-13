@@ -1,11 +1,12 @@
-const express = require('express');
+const express = rquire(express);
 const router = express.Router();
+const logincontroller = require('../controller/user/login')
+const registerRoutes = require('../controller/user/register')
+const deleteRoutes = require('../controller/user/delete')
+
+router.post('/login', loginController.loginUser);
+router.post('/register', registerController.registerUser);
 
 
-const loginRouter = require('../controller/user/login');
-const registerRouter = require('../controller/user/register');
 
-router.post('/login', loginRouter);
-router.post('/register', registerRouter);
-
-module.exports = router;
+module.exports = router
