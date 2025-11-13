@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.post('/', (req, res) => {
+router.post('/', (req, res) => { //sใช้ระบบpostของล็อกอิน
     const { username, password } = req.body;
 
     if (!username || !password) {
